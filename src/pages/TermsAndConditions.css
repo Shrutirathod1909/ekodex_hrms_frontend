@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f6f8fc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.terms-page {
+  background: #f6f8fc;
+}
+
+/* Hero */
+
+.terms-hero {
+    width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* .terms-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+} */
+
+.terms-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.terms-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.terms-tag {
+  display: inline-block;
+  background: #0d6efd;
+  padding: 8px 22px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.terms-content h1 {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.terms-content p {
+  font-size: 20px;
+}
+
+/* Content */
+
+.terms-container {
+  max-width: 1200px;
+  margin: -80px auto 60px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.terms-card {
+  background: #fff;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.terms-section {
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.terms-section:last-child {
+  border-bottom: none;
+}
+
+.terms-section h2 {
+  font-size: 28px;
+  color: #111827;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  border-left: 5px solid #0d6efd;
+}
+
+.terms-list {
+  padding-left: 25px;
+}
+
+.terms-list li {
+  margin-bottom: 10px;
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+.terms-list li::marker {
+  color: #0d6efd;
+}
+
+.contact-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.contact-box p {
+  color: #374151;
+  font-size: 15px;
+}
+
+/* Footer */
+
+.terms-footer {
+  background: #111827;
+  color: #fff;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.terms-footer h5 {
+  margin-bottom: 10px;
+}
+
+.terms-footer p {
+  color: #9ca3af;
+  margin-bottom: 8px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .terms-hero {
+    height: 350px;
+  }
+
+  .terms-content h1 {
+    font-size: 36px;
+  }
+
+  .terms-content p {
+    font-size: 16px;
+  }
+
+  .terms-card {
+    padding: 25px;
+  }
+
+  .terms-section h2 {
+    font-size: 22px;
+  }
+}

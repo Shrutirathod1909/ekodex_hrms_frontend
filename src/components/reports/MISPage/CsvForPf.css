@@ -1,0 +1,29 @@
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    background: white !important;
+  }
+
+  button,
+  .btn {
+    display: none !important;
+  }
+
+  table {
+    width: 100% !important;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid black !important;
+    padding: 6px;
+    text-align: center;
+  }
+
+  h5, h3 {
+    text-align: center;
+  }
+}
+

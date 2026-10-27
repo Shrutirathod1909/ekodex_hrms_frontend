@@ -1,0 +1,58 @@
+.print-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.print-box {
+  width: 85%;
+  height: 90%;
+  background: white;
+  padding: 20px;
+  overflow: auto;
+  border-radius: 10px;
+}
+@media print {
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .ledger-print,
+  .ledger-print * {
+    visibility: visible !important;
+  }
+
+  .ledger-print {
+    position: absolute;
+    left: 15mm;   /* LEFT GAP */
+    top: 15mm;    /* TOP GAP */
+    right: 15mm;  /* RIGHT GAP */
+    width: calc(100% - 30mm);
+  }
+
+  table {
+    width: 100% !important;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #000 !important;
+    padding: 6px !important;
+  }
+
+  button {
+    display: none !important;
+  }
+}

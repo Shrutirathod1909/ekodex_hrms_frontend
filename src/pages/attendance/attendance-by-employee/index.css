@@ -1,0 +1,11 @@
+.table-responsive {
+  overflow-y: visible !important;
+}
+
+.card-body {
+  overflow: visible !important;
+}
+
+.dropdown-menu {
+  z-index: 9999 !important;
+}

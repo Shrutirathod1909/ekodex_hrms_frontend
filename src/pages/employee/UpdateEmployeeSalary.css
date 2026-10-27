@@ -1,0 +1,265 @@
+/* =========================================
+   PAGE
+========================================= */
+
+.salary-page {
+  min-height: 100vh;
+  background: #eef5f8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   TOP BLUE BAR
+========================================= */
+
+.salary-top-bar {
+  width: 100%;
+  height: 7px;
+  background: #285c9c;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.salary-container {
+  padding: 0 20px 40px 20px;
+}
+
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+
+.salary-page-title {
+  margin: 0;
+  padding: 9px 0 10px 0;
+
+  color: #315979;
+
+  font-size: 24px;
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.salary-card {
+  width: 100%;
+
+  border: none !important;
+  border-radius: 5px !important;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.08);
+
+  min-height: 185px;
+}
+
+
+.salary-card .card-body {
+  padding: 17px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.salary-card .form-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #34495e;
+
+  font-size: 13px;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.salary-card .form-control,
+.salary-card .form-select {
+
+  height: 30px;
+
+  border: 1px solid #ced4da;
+
+  border-radius: 0;
+
+  padding: 4px 9px;
+
+  color: #333;
+
+  font-size: 13px;
+
+  box-shadow: none;
+}
+
+
+.salary-card .form-control:focus,
+.salary-card .form-select:focus {
+
+  border-color: #80bdff;
+
+  box-shadow:
+    0 0 0 0.1rem rgba(0, 123, 255, 0.15);
+}
+
+
+/* =========================================
+   SALARY INPUT GROUP
+========================================= */
+
+.salary-input-group {
+  display: flex;
+
+  width: 100%;
+}
+
+
+.salary-input-group .form-control {
+
+  flex: 1;
+
+  min-width: 0;
+
+  border-right: 0;
+}
+
+
+.salary-input-group .form-select {
+
+  width: 100px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   GOVERNMENT RULE TEXT
+========================================= */
+
+.rule-text {
+  margin-left: 2px;
+
+  font-size: 12px;
+
+  color: #34495e;
+}
+
+
+/* =========================================
+   BUTTON AREA
+========================================= */
+
+.salary-buttons {
+
+  display: flex;
+
+  gap: 3px;
+
+  margin-top: 8px;
+}
+
+
+/* =========================================
+   SUBMIT
+========================================= */
+
+.btn-submit {
+
+  border: none !important;
+
+  border-radius: 0 !important;
+
+  background: #08c54d !important;
+
+  padding: 8px 12px !important;
+
+  font-size: 13px !important;
+
+  line-height: 1.2 !important;
+}
+
+
+.btn-submit:hover {
+
+  background: #07ad43 !important;
+}
+
+
+/* =========================================
+   CANCEL
+========================================= */
+
+.btn-cancel {
+
+  border: none !important;
+
+  border-radius: 0 !important;
+
+  background: #285b9c !important;
+
+  padding: 8px 12px !important;
+
+  font-size: 13px !important;
+
+  line-height: 1.2 !important;
+}
+
+
+.btn-cancel:hover {
+
+  background: #204b83 !important;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+  .salary-page-title {
+    font-size: 21px;
+  }
+
+  .salary-card .card-body {
+    padding: 15px;
+  }
+
+}
+
+
+@media (max-width: 575px) {
+
+  .salary-container {
+    padding: 0 10px 30px 10px;
+  }
+
+  .salary-page-title {
+    font-size: 19px;
+  }
+
+  .salary-input-group .form-select {
+    width: 90px;
+  }
+
+  .salary-buttons {
+    margin-top: 15px;
+  }
+
+}

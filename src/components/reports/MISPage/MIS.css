@@ -1,0 +1,350 @@
+.mis-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  background: #f4f6f9;
+}
+
+.page-header {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  padding: 7px 10px !important;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.page-header h3 {
+  margin: 0 0 1px 0 !important;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.page-header h5 {
+  margin: 0 0 1px 0 !important;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #212529;
+}
+
+.page-header p {
+  margin: 0 !important;
+  font-size: 11px;
+  line-height: 14px;
+  color: #6c757d;
+}
+
+.page-header strong {
+  color: #212529;
+  font-weight: 600;
+}
+
+.page-header .no-print {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mis-print-btn,
+.mis-excel-btn {
+  min-width: auto;
+  padding: 3px 9px !important;
+  font-size: 11px !important;
+  line-height: 16px;
+  font-weight: 600;
+  border-radius: 3px !important;
+}
+
+.print-area {
+  width: 100%;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+}
+
+.print-page-header {
+  display: none;
+}
+
+.print-report-title {
+  display: none;
+}
+
+.amount-row {
+  margin-bottom: 10px;
+}
+
+.amount-card {
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+.amount-card .card-body {
+  padding: 8px;
+  text-align: center;
+}
+
+.amount-card h6 {
+  margin: 0 0 3px 0;
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 600;
+  color: #6c757d;
+}
+
+.amount-card h4 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.mis-table {
+  width: 100%;
+  margin-top: 5px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.mis-table th,
+.mis-table td {
+  vertical-align: middle;
+}
+
+.mis-table th {
+  padding: 7px 6px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.mis-table td {
+  padding: 6px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.mis-table th:nth-child(1),
+.mis-table td:nth-child(1) {
+  width: 70px;
+  text-align: center;
+}
+
+.mis-table th:nth-child(2),
+.mis-table td:nth-child(2) {
+  text-align: left;
+}
+
+.mis-table th:nth-child(3),
+.mis-table td:nth-child(3) {
+  width: 180px;
+  text-align: right;
+}
+
+.mis-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .mis-container {
+    padding: 7px;
+  }
+
+  .page-header {
+    padding: 7px 8px !important;
+  }
+
+  .page-header h3 {
+    font-size: 16px;
+  }
+
+  .page-header h5 {
+    font-size: 12px;
+  }
+
+  .page-header p {
+    font-size: 10px;
+  }
+
+  .page-header .no-print {
+    width: 100%;
+    margin-top: 6px;
+    justify-content: flex-start;
+  }
+
+  .print-area {
+    padding: 10px;
+  }
+
+  .mis-table th,
+  .mis-table td {
+    font-size: 11px;
+    padding: 5px;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+
+  html,
+  body {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .mis-container {
+    width: 100% !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .page-header {
+    display: none !important;
+  }
+
+  .print-area {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  .print-page-header {
+    display: block !important;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding: 0 0 7px 0;
+    border-bottom: 2px solid #000;
+  }
+
+  .print-page-header h3 {
+    margin: 0 0 2px 0;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #000 !important;
+  }
+
+  .print-page-header h5 {
+    margin: 0 0 2px 0;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    color: #000 !important;
+  }
+
+  .print-page-header p {
+    margin: 0;
+    font-size: 10px;
+    line-height: 13px;
+    color: #000 !important;
+  }
+
+  .amount-card {
+    border: 1px solid #000 !important;
+    border-radius: 3px !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  .amount-card h6,
+  .amount-card h4 {
+    color: #000 !important;
+  }
+
+  .amount-card .card-body {
+    padding: 6px !important;
+  }
+
+  .mis-table {
+    width: 100% !important;
+    margin: 0 !important;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    box-shadow: none !important;
+    table-layout: fixed !important;
+  }
+
+  .mis-table thead {
+    display: table-header-group;
+  }
+
+  .mis-table tbody {
+    display: table-row-group;
+  }
+
+  .mis-table tr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .mis-table th {
+    background: #000 !important;
+    color: #ffffff !important;
+    border: 1px solid #000 !important;
+    padding: 6px !important;
+    font-size: 10px !important;
+    line-height: 13px !important;
+  }
+
+  .mis-table td {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #000 !important;
+    padding: 5px !important;
+    font-size: 10px !important;
+    line-height: 13px !important;
+  }
+
+  .mis-table th:nth-child(1),
+  .mis-table td:nth-child(1) {
+    width: 60px !important;
+    text-align: center !important;
+  }
+
+  .mis-table th:nth-child(2),
+  .mis-table td:nth-child(2) {
+    text-align: left !important;
+  }
+
+  .mis-table th:nth-child(3),
+  .mis-table td:nth-child(3) {
+    width: 140px !important;
+    text-align: right !important;
+  }
+
+  .shadow,
+  .shadow-sm {
+    box-shadow: none !important;
+  }
+
+  .text-primary,
+  .text-success,
+  .text-muted {
+    color: #000 !important;
+  }
+}

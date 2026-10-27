@@ -1,0 +1,464 @@
+.wages-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  color: #29445a;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.wages-header {
+  min-height: 52px;
+
+  background: #edf4f7;
+
+  border-top: 2px solid #286090;
+
+  border-bottom: 1px solid #d7d7d7;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 14px;
+}
+
+.wages-header h3 {
+  margin: 0;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  color: #294b64;
+}
+
+.back-btn {
+  background: #286090;
+
+  color: #ffffff;
+
+  border: none;
+
+  border-radius: 2px;
+
+  padding: 9px 14px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.back-btn:hover {
+  background: #204d74;
+}
+
+/* =====================================================
+   TOP OPTIONS
+===================================================== */
+
+.top-options {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    1fr;
+
+  padding: 11px 25px;
+
+  border-bottom:
+    1px solid #dddddd;
+
+  min-height: 44px;
+
+  align-items: center;
+}
+
+.top-options label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #29445a;
+
+  cursor: pointer;
+}
+
+/* =====================================================
+   SELECT ROW
+===================================================== */
+
+.select-row {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    1fr;
+
+  gap: 28px;
+
+  padding:
+    18px
+    25px
+    15px;
+
+  border-bottom:
+    1px solid #dddddd;
+}
+
+.select-row > div {
+  width: 100%;
+}
+
+.select-row label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #29445a;
+}
+
+.select-row select {
+  width: 100%;
+
+  height: 40px;
+
+  padding:
+    0
+    12px;
+
+  border:
+    1px solid #dddddd;
+
+  border-radius: 0;
+
+  background: #ffffff;
+
+  color: #333333;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.select-row select:focus {
+  border-color: #66afe9;
+}
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.wage-section {
+  margin:
+    0
+    25px;
+
+  padding:
+    12px
+    0
+    14px;
+
+  border-bottom:
+    1px solid #dddddd;
+}
+
+.wage-section-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 10px;
+}
+
+.wage-section-title input {
+  width: 14px;
+  height: 14px;
+
+  margin: 0;
+
+  cursor: pointer;
+}
+
+.wage-section-title span {
+  font-size: 20px;
+
+  font-weight: 500;
+
+  color: #294b64;
+
+  cursor: pointer;
+}
+
+/* =====================================================
+   CHECKBOX GRID
+===================================================== */
+
+.wage-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  column-gap: 50px;
+
+  row-gap: 7px;
+}
+
+.wage-checkbox {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  min-height: 20px;
+
+  color: #29445a;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.wage-checkbox input {
+  width: 14px;
+  height: 14px;
+
+  margin: 0;
+
+  cursor: pointer;
+}
+
+/* =====================================================
+   ALL CHECKBOX
+===================================================== */
+
+input[type="checkbox"] {
+  accent-color: #087ef5;
+
+  cursor: pointer;
+}
+
+/* =====================================================
+   SIMPLE ROW
+===================================================== */
+
+.simple-row {
+  min-height: 63px;
+
+  margin:
+    0
+    25px;
+
+  border-bottom:
+    1px solid #dddddd;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.simple-row input {
+  width: 14px;
+  height: 14px;
+
+  margin: 0;
+
+  cursor: pointer;
+}
+
+.simple-row span {
+  font-size: 20px;
+
+  font-weight: 500;
+
+  color: #294b64;
+
+  cursor: pointer;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.wages-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding:
+    14px
+    0
+    22px;
+}
+
+.submit-btn {
+  background: #00b84f;
+
+  color: #ffffff;
+
+  border: none;
+
+  padding:
+    8px
+    15px;
+
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.submit-btn:hover {
+  background: #009f44;
+}
+
+.reset-btn {
+  background: #f0ad4e;
+
+  color: #ffffff;
+
+  border: none;
+
+  padding:
+    8px
+    15px;
+
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.reset-btn:hover {
+  background: #ec971f;
+}
+
+.cancel-btn {
+  background: #286090;
+
+  color: #ffffff;
+
+  border: none;
+
+  padding:
+    8px
+    15px;
+
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.cancel-btn:hover {
+  background: #204d74;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .wage-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    column-gap: 25px;
+  }
+
+}
+
+@media (max-width: 850px) {
+
+  .top-options {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .select-row {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .wage-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .wages-header {
+    padding: 10px;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .wages-header h3 {
+    font-size: 16px;
+  }
+
+  .wage-section {
+    margin:
+      0
+      12px;
+  }
+
+  .simple-row {
+    margin:
+      0
+      12px;
+  }
+
+  .top-options {
+    padding:
+      12px;
+  }
+
+  .select-row {
+    padding:
+      15px
+      12px;
+  }
+
+  .wage-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

@@ -1,0 +1,392 @@
+.salary-page {
+  min-height: 100vh;
+  background: #edf5f7;
+  color: #284b63;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =====================================================
+   TOP SEARCH CARD
+===================================================== */
+
+.top-search-card {
+  border: none !important;
+  border-radius: 7px !important;
+  margin-bottom: 7px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.top-search-card .card-body {
+  padding: 8px 14px !important;
+}
+
+.top-search-card h6 {
+  margin-top: 0 !important;
+  margin-bottom: 3px !important;
+}
+
+/* =====================================================
+   SEARCH TABLE
+===================================================== */
+
+.search-table {
+  border: 1px solid #dce1e5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search-header {
+  height: 35px;
+  border-bottom: 1px solid #dce1e5;
+  align-items: center;
+  margin: 0;
+}
+
+.search-header > div {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+  border-right: 1px solid #dce1e5;
+  font-size: 12px;
+}
+
+.search-row {
+  margin: 0;
+  min-height: 42px;
+  align-items: center;
+}
+
+.search-row > div {
+  padding: 4px 5px;
+}
+
+.search-row .form-select,
+.search-row .form-control {
+  height: 30px;
+  min-height: 30px;
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #35546a;
+}
+
+.search-row .form-select:focus,
+.search-row .form-control:focus {
+  box-shadow: none;
+  border-color: #08b3cf;
+}
+
+/* =====================================================
+   PLUS MINUS
+===================================================== */
+
+.search-action-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+}
+
+.plus-btn,
+.minus-btn {
+  width: 27px;
+  height: 25px;
+  min-width: 27px;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 3px !important;
+  font-size: 16px !important;
+  line-height: 1;
+}
+
+.plus-btn {
+  background: #08b3cf !important;
+}
+
+.minus-btn {
+  background: #ff4d52 !important;
+}
+
+/* =====================================================
+   MONTH YEAR
+===================================================== */
+
+.month-year-row {
+  padding-left: 5px;
+  margin-top: 7px;
+}
+
+.month-year-row .form-label {
+  font-size: 11px;
+  margin-bottom: 3px;
+}
+
+.month-year-row .form-select {
+  height: 30px;
+  min-height: 30px;
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #35546a;
+}
+
+.month-year-row .form-select:focus {
+  box-shadow: none;
+}
+
+/* =====================================================
+   SEARCH RESET BUTTONS
+===================================================== */
+
+.top-buttons {
+  padding-left: 5px;
+  margin-top: 8px;
+}
+
+.search-btn,
+.reset-btn {
+  height: 30px;
+  min-height: 30px;
+  padding: 3px 12px !important;
+  font-size: 12px;
+  border-radius: 3px !important;
+}
+
+.search-btn {
+  background: #285d9f !important;
+  border-color: #285d9f !important;
+  margin-right: 4px;
+}
+
+.reset-btn {
+  background: #ff4d52 !important;
+  border-color: #ff4d52 !important;
+}
+
+/* =====================================================
+   SALARY CARD
+===================================================== */
+
+.salary-card {
+  border: none !important;
+  border-radius: 7px !important;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.salary-card-header {
+  height: 30px;
+  background: #fff !important;
+  border-bottom: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 10px !important;
+}
+
+.salary-card-header h4 {
+  margin: 0 !important;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(58, 58, 58);
+
+  display: flex;
+  align-items: center;
+}
+
+.salary-card-header > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* =====================================================
+   HEADER BUTTONS
+===================================================== */
+
+.click-search-btn {
+  height: 32px;
+  background: #08b4ce !important;
+  border-color: #08b4ce !important;
+  border-radius: 2px !important;
+  margin-right: 0 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-btn {
+  height: 32px;
+  background: #10bc5b !important;
+  border-color: #10bc5b !important;
+  border-radius: 2px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====================================================
+   SUMMARY
+===================================================== */
+
+.summary {
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  border-bottom: 1px solid #d8dde1;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.second-summary {
+  color: #c77700;
+  border-bottom: none;
+  min-height: 50px;
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.salary-table {
+  min-width: 1350px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.salary-table th {
+  height: 43px;
+  background: #fff !important;
+  color: #294e67;
+  font-weight: 500;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.salary-table td {
+  height: 40px;
+  color: #284b63;
+  vertical-align: top;
+  padding: 9px 8px !important;
+}
+
+.salary-table tbody tr:first-child {
+  background: #f1f1f1;
+}
+
+.salary-table tbody tr:nth-child(2) {
+  background: #fff;
+}
+
+.client-column {
+  min-width: 280px;
+  line-height: 18px;
+}
+
+/* =====================================================
+   ACTION BUTTON
+===================================================== */
+
+.action-btn {
+  height: 32px;
+  min-width: 96px;
+
+  background: #08b3cf !important;
+  border-color: #08b3cf !important;
+
+  border-radius: 2px !important;
+
+  font-size: 17px;
+}
+
+/* =====================================================
+   DROPDOWN - COMPACT SIZE
+===================================================== */
+
+.dropdown-menu {
+  padding: 3px 0 !important;
+  min-width: 100px !important;
+  border-radius: 3px !important;
+  font-size: 12px !important;
+}
+
+.dropdown-item {
+  padding: 5px 10px !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  min-height: auto !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #f1f5f7 !important;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+  .month-year-row {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .top-buttons {
+    padding-left: 0;
+  }
+
+  .summary {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .salary-page {
+    padding: 8px;
+  }
+
+  .salary-card-header {
+    height: auto;
+    padding: 20px !important;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .salary-card-header h2 {
+    font-size: 25px;
+  }
+
+  .click-search-btn,
+  .download-btn {
+    font-size: 12px;
+  }
+}

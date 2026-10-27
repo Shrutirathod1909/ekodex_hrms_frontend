@@ -1,0 +1,611 @@
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #304b5d;
+  background: #edf3f5;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* PAGE */
+.print-site-page {
+  width: calc(100% - 40px);
+  min-height: calc(100vh - 14px);
+  margin: 4px auto 14px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 12px rgba(35, 57, 71, 0.08);
+  overflow: hidden;
+}
+
+/* TOP HEADER */
+.print-page-header {
+  width: 100%;
+  min-height: 83px;
+  padding: 22px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  background: #fff;
+  box-shadow: 0 7px 22px rgba(0, 0, 0, 0.035);
+}
+
+.print-page-header > span {
+  padding-top: 3px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #31566e;
+}
+
+.print-page-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.print-page-actions button {
+  min-height: 38px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.print-page-actions button:hover {
+  opacity: 0.88;
+}
+
+.print-btn {
+  background: #2c5ca1;
+}
+
+.download-btn {
+  background: #ff4d55;
+}
+
+.back-btn {
+  background: #0fbd61;
+}
+
+/* CONTENT */
+.salary-print-content {
+  width: 100%;
+  min-width: 0;
+  padding: 36px 17px 45px;
+  background: #fff;
+}
+
+/* COMPANY HEADER */
+.company-header {
+  width: 100%;
+  padding: 3px 15px 17px;
+  text-align: center;
+  color: #31566e;
+}
+
+.company-header h1 {
+  margin: 0 0 9px;
+  font-size: 23px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #31566e;
+}
+
+.company-header p {
+  max-width: 900px;
+  margin: 3px auto;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.salary-line {
+  width: 100%;
+  height: 1px;
+  margin: 4px 0 18px;
+  background: #e0e4e7;
+}
+
+/* SITE / MONTH / YEAR */
+.site-month-year {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  min-height: 48px;
+  padding: 8px 4px;
+  border-top: 1px solid #e1e5e8;
+  border-bottom: 1px solid #e1e5e8;
+  color: #314e60;
+  font-size: 13px;
+}
+
+.site-month-year div:nth-child(1) {
+  text-align: left;
+}
+
+.site-month-year div:nth-child(2) {
+  text-align: center;
+}
+
+.site-month-year div:nth-child(3) {
+  text-align: right;
+}
+
+.site-month-year b {
+  font-weight: 700;
+}
+
+/* TABLE CONTAINERS */
+.salary-table-container,
+.hold-salary-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-width: thin;
+  scrollbar-color: #969696 #f3f3f3;
+}
+
+.salary-table-container::-webkit-scrollbar,
+.hold-salary-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.salary-table-container::-webkit-scrollbar-track,
+.hold-salary-container::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+.salary-table-container::-webkit-scrollbar-thumb,
+.hold-salary-container::-webkit-scrollbar-thumb {
+  background: #929292;
+  border-radius: 8px;
+}
+
+/* MAIN TABLE */
+.print-salary-table {
+  width: 100%;
+  min-width: 1450px;
+  margin: 0;
+  border-collapse: collapse;
+  table-layout: auto;
+  color: #344c5d;
+  font-size: 13px;
+}
+
+.print-salary-table th,
+.print-salary-table td {
+  height: 30px;
+  padding: 6px 7px;
+  border: 1px solid #e0e6eb;
+  vertical-align: middle;
+  line-height: 1.2;
+}
+
+/* BLACK TABLE HEADER */
+.print-salary-table thead th,
+.hold-salary-table thead th {
+  background: #000 !important;
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+  border: 1px solid #333;
+}
+
+.print-salary-table td {
+  background: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.print-salary-table th:first-child,
+.print-salary-table td:first-child {
+  width: 58px;
+  min-width: 58px;
+}
+
+.print-salary-table th.name,
+.print-salary-table td.name {
+  width: 235px;
+  min-width: 235px;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.print-salary-table th:nth-child(3),
+.print-salary-table td:nth-child(3) {
+  min-width: 60px;
+}
+
+.print-salary-table th:nth-child(4),
+.print-salary-table td:nth-child(4) {
+  min-width: 56px;
+}
+
+.print-salary-table th.post,
+.print-salary-table td.post {
+  width: 190px;
+  min-width: 190px;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.print-salary-table th:nth-child(n + 6):nth-child(-n + 18),
+.print-salary-table td:nth-child(n + 6):nth-child(-n + 18) {
+  min-width: 48px;
+}
+
+.print-salary-table th:nth-child(19),
+.print-salary-table td:nth-child(19) {
+  min-width: 135px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.print-salary-table th:nth-child(20),
+.print-salary-table td:nth-child(20) {
+  min-width: 125px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.print-salary-table th:nth-child(21),
+.print-salary-table td:nth-child(21) {
+  min-width: 70px;
+}
+
+.print-salary-table th:nth-child(22),
+.print-salary-table td:nth-child(22) {
+  min-width: 100px;
+}
+
+.print-salary-table .total-row td {
+  background: #fff;
+  font-weight: 700;
+  color: #304b5d;
+}
+
+/* LOADING / ERROR */
+.no-data {
+  height: 36px !important;
+  text-align: center !important;
+  font-weight: 400 !important;
+  color: #687b87;
+}
+
+.loading-text,
+.error-text {
+  padding: 30px 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.loading-text {
+  color: #31566e;
+}
+
+.error-text {
+  color: #c62828;
+}
+
+/* PAYMENT SUMMARY */
+.salary-payment-summary {
+  width: 100%;
+  margin-top: 18px;
+  border: 1px solid #e0e6eb;
+  color: #344c5d;
+}
+
+.salary-payment-summary > div {
+  display: grid;
+  grid-template-columns: minmax(250px, 2fr) minmax(100px, 1fr);
+  align-items: center;
+  min-height: 30px;
+  border-bottom: 1px solid #e0e6eb;
+  font-size: 13px;
+}
+
+.salary-payment-summary > div:last-child {
+  border-bottom: none;
+}
+
+.salary-payment-summary b {
+  padding: 6px 7px;
+  font-weight: 700;
+}
+
+.salary-payment-summary span {
+  display: block;
+  min-height: 29px;
+  padding: 6px 7px;
+  border-left: 1px solid #e0e6eb;
+  font-weight: 700;
+}
+
+/* HOLD SALARY */
+.hold-salary-section {
+  width: 100%;
+  margin-top: 110px;
+}
+
+.hold-salary-section h3 {
+  margin: 0 0 8px;
+  color: #385b70;
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.hold-salary-table {
+  width: 100%;
+  min-width: 1250px;
+  margin: 0;
+  border-collapse: collapse;
+  table-layout: auto;
+  color: #344c5d;
+  font-size: 13px;
+}
+
+.hold-salary-table th,
+.hold-salary-table td {
+  height: 30px;
+  padding: 6px 7px;
+  border: 1px solid #e0e6eb;
+  vertical-align: middle;
+  line-height: 1.2;
+}
+
+.hold-salary-table td {
+  background: #fff;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.hold-salary-table th:first-child,
+.hold-salary-table td:first-child {
+  min-width: 85px;
+}
+
+.hold-salary-table th.name,
+.hold-salary-table td.name {
+  width: 210px;
+  min-width: 210px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.hold-salary-table th.post,
+.hold-salary-table td.post {
+  width: 170px;
+  min-width: 170px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.hold-salary-table th:nth-child(17),
+.hold-salary-table td:nth-child(17) {
+  min-width: 130px;
+}
+
+.hold-salary-table th:last-child,
+.hold-salary-table td:last-child {
+  min-width: 160px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .print-site-page {
+    width: calc(100% - 16px);
+    margin: 8px auto;
+  }
+
+  .print-page-header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
+  }
+
+  .print-page-actions {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .print-page-actions button {
+    padding: 0 12px;
+  }
+
+  .salary-print-content {
+    padding: 20px 10px 30px;
+  }
+
+  .company-header {
+    padding: 5px 0 14px;
+  }
+
+  .company-header h1 {
+    font-size: 18px;
+  }
+
+  .company-header p {
+    font-size: 12px;
+  }
+
+  .site-month-year {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    align-items: start;
+    font-size: 12px;
+  }
+
+  .site-month-year div:nth-child(1),
+  .site-month-year div:nth-child(2),
+  .site-month-year div:nth-child(3) {
+    text-align: left;
+  }
+
+  .salary-payment-summary > div {
+    grid-template-columns: minmax(0, 1fr) 100px;
+  }
+
+  .hold-salary-section {
+    margin-top: 55px;
+  }
+
+  .hold-salary-section h3 {
+    font-size: 21px;
+  }
+}
+
+/* PRINT POPUP */
+.salary-print-popup {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+.print-popup-wrapper {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+}
+
+.salary-print-popup .salary-print-content {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  box-shadow: none;
+}
+
+/* PRINT PAGE SETTINGS */
+@page {
+  size: A4 landscape;
+  margin: 5mm;
+}
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 5mm;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .salary-print-content,
+  .salary-print-content * {
+    visibility: visible !important;
+  }
+
+  .salary-print-content {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+
+  .no-print,
+  .print-page-header {
+    display: none !important;
+  }
+
+  .salary-table-container,
+  .hold-salary-container {
+    width: 100% !important;
+    max-width: none !important;
+    overflow: visible !important;
+  }
+
+  .print-salary-table,
+  .hold-salary-table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+  }
+
+  .print-salary-table th,
+  .hold-salary-table th {
+    background: #000 !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .print-salary-table th,
+  .print-salary-table td,
+  .hold-salary-table th,
+  .hold-salary-table td {
+    padding: 3px 2px !important;
+    font-size: 8px !important;
+    border: 1px solid #333 !important;
+    overflow-wrap: anywhere !important;
+    white-space: normal !important;
+  }
+
+  .company-header h1 {
+    font-size: 16px !important;
+  }
+
+  .company-header p {
+    font-size: 9px !important;
+  }
+
+  .salary-payment-summary {
+    margin-top: 8px !important;
+  }
+
+  .hold-salary-section {
+    margin-top: 18px !important;
+  }
+
+  .print-salary-table tr,
+  .hold-salary-table tr {
+    break-inside: avoid !important;
+  }
+}

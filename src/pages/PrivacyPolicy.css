@@ -1,0 +1,158 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f6f8fc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.privacy-page {
+  background: #f6f8fc;
+}
+
+/* Hero Section */
+
+.privacy-hero {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* .privacy-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+} */
+
+.privacy-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.privacy-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.privacy-tag {
+  display: inline-block;
+  background: #0d6efd;
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.privacy-content h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.privacy-content p {
+  font-size: 22px;
+}
+
+/* Content */
+
+.privacy-container {
+  max-width: 1200px;
+  margin: -80px auto 60px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.privacy-card {
+  background: #fff;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.privacy-section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.privacy-section:last-child {
+  border-bottom: none;
+}
+
+.privacy-card h2 {
+  font-size: 30px;
+  color: #111827;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  border-left: 5px solid #0d6efd;
+}
+
+.privacy-card h3 {
+  font-size: 22px;
+  color: #374151;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.privacy-card p {
+  color: #6b7280;
+  line-height: 1.9;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.privacy-card ul {
+  padding-left: 25px;
+}
+
+.privacy-card li {
+  color: #6b7280;
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+.privacy-card li::marker {
+  color: #0d6efd;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .privacy-hero {
+    height: 350px;
+  }
+
+  .privacy-content h1 {
+    font-size: 38px;
+  }
+
+  .privacy-content p {
+    font-size: 16px;
+  }
+
+  .privacy-card {
+    padding: 25px;
+  }
+
+  .privacy-card h2 {
+    font-size: 24px;
+  }
+
+  .privacy-card h3 {
+    font-size: 18px;
+  }
+}

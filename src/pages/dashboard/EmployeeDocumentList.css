@@ -1,0 +1,436 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.document-page{
+    padding:12px;
+    background:#f4f7fb;
+    min-height:100vh;
+    font-family:Inter,Arial,sans-serif;
+}
+.pagination-box{
+
+display:flex;
+justify-content:flex-end;
+align-items:center;
+gap:4px;
+margin-top:20px;
+
+}
+
+
+.pagination-box button{
+
+height:34px;
+min-width:34px;
+
+border:1px solid #dee2e6;
+
+background:#fff;
+
+color:#0d6efd;
+
+border-radius:4px;
+
+font-size:14px;
+
+cursor:pointer;
+
+}
+
+
+.pagination-box button:hover{
+
+background:#f1f5ff;
+
+}
+
+
+.pagination-box .active-page{
+
+background:#0d6efd;
+
+color:#fff;
+
+border-color:#0d6efd;
+
+}
+
+
+.pagination-box button:disabled{
+
+opacity:.5;
+
+cursor:not-allowed;
+
+}
+
+
+.pagination-box .dots{
+
+padding:0 8px;
+
+font-weight:bold;
+
+color:#777;
+
+}
+/* ================= HEADER ================= */
+
+.document-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:15px;
+}
+
+.back-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    border:none;
+    background:#2563eb;
+    color:#fff;
+    padding:8px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-1px);
+}
+
+.back-btn svg{
+    font-size:13px;
+}
+
+.document-header h2{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:18px;
+    font-weight:700;
+    color:#1f2937;
+}
+
+/* ================= FILTER CARD ================= */
+
+.document-filter-card{
+    background:#fff;
+    border-radius:12px;
+    padding:14px 16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    margin-bottom:12px;
+    border:1px solid #edf2f7;
+    box-shadow:0 5px 15px rgba(15,23,42,.05);
+}
+
+.filter-left{
+    flex:1;
+}
+
+.filter-left h4{
+    font-size:15px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+/* ================= TABS ================= */
+
+.tabs{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.tabs button{
+    border:none;
+    background:#eef2ff;
+    color:#2563eb;
+    padding:7px 14px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:12px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.tabs button:hover{
+    background:#dbeafe;
+}
+
+.active-tab{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8)!important;
+    color:#fff!important;
+    box-shadow:0 4px 10px rgba(37,99,235,.18);
+}
+
+/* ================= FILTER ================= */
+
+.filter-right{
+    width:180px;
+}
+
+.filter-right label{
+    display:block;
+    margin-bottom:5px;
+    font-size:12px;
+    font-weight:600;
+    color:#6b7280;
+}
+
+.filter-right select{
+    width:100%;
+    padding:8px 10px;
+    border-radius:8px;
+    border:1px solid #dbe4ee;
+    font-size:12px;
+    outline:none;
+    background:#fff;
+}
+
+.filter-right select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.12);
+}
+
+/* ================= SEARCH ================= */
+
+.document-card{
+    background:#fff;
+    border-radius:12px;
+    padding:12px;
+    margin-bottom:12px;
+    border:1px solid #edf2f7;
+    box-shadow:0 5px 15px rgba(15,23,42,.05);
+}
+
+.search-box{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    height:38px;
+    border:1px solid #dbe4ee;
+    border-radius:10px;
+    padding:0 12px;
+}
+
+.search-box:focus-within{
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.10);
+}
+
+.search-box svg{
+    color:#6b7280;
+    font-size:14px;
+}
+
+.search-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    font-size:13px;
+    background:none;
+}
+
+/* ================= TABLE ================= */
+
+.table-card{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid #edf2f7;
+    box-shadow:0 5px 15px rgba(15,23,42,.05);
+}
+
+.table-responsive{
+    overflow:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#2563eb;
+}
+
+thead th{
+    color:#fff;
+    padding:10px 12px;
+    font-size:12px;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+tbody td{
+    padding:10px 12px;
+    font-size:12px;
+    border-bottom:1px solid #eef2f7;
+}
+
+tbody tr{
+    transition:.2s;
+}
+
+tbody tr:hover{
+    background:#f8fbff;
+}
+
+/* ================= EMPLOYEE ================= */
+
+.employee{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.avatar{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:13px;
+    font-weight:700;
+}
+
+.employee b{
+    font-size:12px;
+    color:#111827;
+}
+
+.employee span{
+    color:#6b7280;
+    font-size:11px;
+}
+
+/* ================= STATUS ================= */
+
+.badge{
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.2px;
+}
+
+.verified{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.pending{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+.rejected{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.not-upload{
+    background:#e5e7eb;
+    color:#374151;
+}
+
+/* ================= NO DATA ================= */
+
+.no-data{
+    text-align:center;
+    padding:25px;
+    color:#6b7280;
+    font-size:12px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.document-page{
+    padding:10px;
+}
+
+.document-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.document-header h2{
+    font-size:16px;
+}
+
+.document-filter-card{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:12px;
+}
+
+.filter-right{
+    width:100%;
+}
+
+.tabs{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    width:100%;
+    padding-bottom:5px;
+}
+
+.tabs button{
+    white-space:nowrap;
+    font-size:11px;
+    padding:6px 12px;
+}
+
+thead th,
+tbody td{
+    padding:8px;
+    font-size:11px;
+}
+
+.avatar{
+    width:30px;
+    height:30px;
+    font-size:12px;
+}
+
+.employee b{
+    font-size:11px;
+}
+
+.employee span{
+    font-size:10px;
+}
+
+.badge{
+    font-size:9px;
+    padding:4px 8px;
+}
+
+.search-box{
+    height:34px;
+}
+
+.search-box input{
+    font-size:12px;
+}
+
+}

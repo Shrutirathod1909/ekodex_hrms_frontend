@@ -1,0 +1,136 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f6f8fc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.refund-page {
+  background: #f6f8fc;
+}
+
+/* Hero */
+
+
+
+.refund-hero {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* .refund-hero-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+} */
+.refund-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.refund-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 0 20px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.refund-tag {
+  display: inline-block;
+  background: #0d6efd;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.refund-content h1 {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.refund-content p {
+  font-size: 20px;
+}
+
+/* Content */
+
+.refund-container {
+  max-width: 1200px;
+  margin: -80px auto 60px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.refund-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.refund-section {
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.refund-section:last-child {
+  border-bottom: none;
+}
+
+.refund-card h2 {
+  font-size: 30px;
+  color: #111827;
+  margin-bottom: 18px;
+  padding-left: 15px;
+  border-left: 5px solid #0d6efd;
+}
+
+.refund-card p {
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 12px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .refund-hero {
+    height: 340px;
+  }
+
+  .refund-content h1 {
+    font-size: 34px;
+  }
+
+  .refund-content p {
+    font-size: 16px;
+  }
+
+  .refund-card {
+    padding: 25px;
+  }
+
+  .refund-card h2 {
+    font-size: 24px;
+  }
+}
+

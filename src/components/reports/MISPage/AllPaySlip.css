@@ -1,0 +1,735 @@
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.all-payslip-container {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 8px;
+
+  background: #f5f5f5;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   SCREEN HEADER
+========================================================= */
+
+.payslip-card {
+  width: 100%;
+
+  margin-bottom: 8px;
+
+  background: #ffffff;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 4px;
+}
+
+.payslip-card-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 7px 10px;
+
+  font-size: 13px;
+
+  line-height: 18px;
+
+  font-weight: 600;
+}
+
+.payslip-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.payslip-buttons .btn {
+  padding: 3px 9px;
+
+  font-size: 11px;
+
+  line-height: 16px;
+
+  border-radius: 3px;
+}
+
+
+/* =========================================================
+   PRINT AREA
+========================================================= */
+
+.tables-container {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   ONE PAYSLIP
+========================================================= */
+
+.page {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0 0 12px 0;
+
+  padding: 0;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  page-break-inside: avoid;
+
+  break-inside: avoid;
+}
+
+
+/* =========================================================
+   MAIN PAYSLIP TABLE
+========================================================= */
+
+.payslip-table {
+  width: 100% !important;
+
+  max-width: 100% !important;
+
+  table-layout: fixed !important;
+
+  border-collapse: collapse !important;
+
+  border-spacing: 0 !important;
+
+  background: #ffffff !important;
+
+  border: 1px solid #000000 !important;
+}
+
+
+/* =========================================================
+   8 COLUMN WIDTHS
+========================================================= */
+
+.payslip-table .col-1 {
+  width: 12%;
+}
+
+.payslip-table .col-2 {
+  width: 8%;
+}
+
+.payslip-table .col-3 {
+  width: 12%;
+}
+
+.payslip-table .col-4 {
+  width: 12%;
+}
+
+.payslip-table .col-5 {
+  width: 15%;
+}
+
+.payslip-table .col-6 {
+  width: 8%;
+}
+
+.payslip-table .col-7 {
+  width: 15%;
+}
+
+.payslip-table .col-8 {
+  width: 18%;
+}
+
+
+/* =========================================================
+   ALL MAIN TABLE CELLS
+========================================================= */
+
+.payslip-table td,
+.payslip-table th {
+  border: 1px solid #000000 !important;
+
+  background: #ffffff !important;
+
+  color: #000000;
+
+  padding: 3px 4px !important;
+
+  font-size: 11px;
+
+  line-height: 1.05;
+
+  font-weight: 600;
+
+  vertical-align: middle;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   COMPANY HEADER
+========================================================= */
+
+.company-name {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+  background: #ffffff !important;
+
+  color: red !important;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  line-height: 16px;
+
+  font-weight: 700;
+}
+
+.company-address {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+  background: #ffffff !important;
+
+  color: #000000 !important;
+
+  text-align: center;
+
+  font-size: 9px;
+
+  line-height: 11px;
+
+  font-weight: 400;
+}
+
+.slip-month {
+  text-align: center !important;
+
+  font-weight: 700 !important;
+
+  font-size: 11px !important;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   EMPLOYEE SECTION
+========================================================= */
+
+.employee-label {
+  font-weight: 700 !important;
+
+  text-align: left !important;
+
+  white-space: nowrap;
+
+  background: #ffffff !important;
+}
+
+.employee-value {
+  font-weight: 600 !important;
+
+  text-align: left !important;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  background: #ffffff !important;
+}
+
+
+/* =========================================================
+   LEAVE SECTION
+========================================================= */
+
+.leave-label {
+  font-weight: 700 !important;
+
+  text-align: left !important;
+
+  white-space: nowrap;
+
+  background: #ffffff !important;
+}
+
+.leave-value {
+  font-weight: 600 !important;
+
+  text-align: center !important;
+
+  white-space: nowrap;
+
+  background: #ffffff !important;
+}
+
+.attendance-label {
+  font-weight: 700 !important;
+
+  text-align: left !important;
+
+  white-space: nowrap;
+
+  background: #ffffff !important;
+}
+
+.attendance-value {
+  font-weight: 600 !important;
+
+  text-align: center !important;
+
+  white-space: nowrap;
+
+  background: #ffffff !important;
+}
+
+.bank-label {
+  font-weight: 700 !important;
+
+  text-align: left !important;
+
+  white-space: nowrap;
+
+  background: #ffffff !important;
+}
+
+.bank-value {
+  font-weight: 600 !important;
+
+  text-align: left !important;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  background: #ffffff !important;
+}
+
+
+/* =========================================================
+   SALARY TABLE
+========================================================= */
+
+.salary-inner-table {
+  width: 100% !important;
+
+  max-width: 100% !important;
+
+  table-layout: fixed !important;
+
+  border-collapse: collapse !important;
+
+  border-spacing: 0 !important;
+
+  background: #ffffff !important;
+}
+
+
+/* =========================================================
+   SALARY COLUMN WIDTH
+========================================================= */
+
+.salary-inner-table .salary-col-1 {
+  width: 25%;
+}
+
+.salary-inner-table .salary-col-2 {
+  width: 12.5%;
+}
+
+.salary-inner-table .salary-col-3 {
+  width: 12.5%;
+}
+
+.salary-inner-table .salary-col-4 {
+  width: 25%;
+}
+
+.salary-inner-table .salary-col-5 {
+  width: 25%;
+}
+
+
+/* =========================================================
+   SALARY CELLS
+========================================================= */
+
+.salary-inner-table td,
+.salary-inner-table th {
+  border: 1px solid #000000 !important;
+
+  background: #ffffff !important;
+
+  color: #000000 !important;
+
+  padding: 3px 4px !important;
+
+  font-size: 11px;
+
+  line-height: 1.05;
+
+  font-weight: 600;
+
+  vertical-align: middle;
+
+  box-sizing: border-box;
+}
+
+.salary-inner-table th {
+  font-weight: 700 !important;
+
+  text-align: left;
+}
+
+.salary-label {
+  text-align: left !important;
+
+  white-space: nowrap;
+}
+
+.salary-number {
+  text-align: right !important;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NO DATA
+========================================================= */
+
+.no-payslip-data {
+  width: 100%;
+
+  padding: 25px;
+
+  text-align: center;
+
+  color: #dc3545;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+  @page {
+    size: A4 portrait;
+
+    margin: 5mm;
+  }
+
+  html,
+  body {
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    max-width: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    background: #ffffff !important;
+
+    overflow: visible !important;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact !important;
+
+    print-color-adjust: exact !important;
+  }
+
+
+  /* -------------------------------------------------------
+     HIDE SCREEN HEADER
+  ------------------------------------------------------- */
+
+  .noprint {
+    display: none !important;
+  }
+
+
+  /* -------------------------------------------------------
+     MAIN
+  ------------------------------------------------------- */
+
+  .all-payslip-container {
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    background: #ffffff !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* -------------------------------------------------------
+     PRINT AREA
+  ------------------------------------------------------- */
+
+  .tables-container {
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* -------------------------------------------------------
+     ONE EMPLOYEE = ONE PAGE
+  ------------------------------------------------------- */
+
+  .page {
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    background: #ffffff !important;
+
+    overflow: hidden !important;
+
+    page-break-inside: avoid !important;
+
+    break-inside: avoid !important;
+  }
+
+  .page:not(:last-child) {
+    page-break-after: always !important;
+
+    break-after: page !important;
+  }
+
+  .page:last-child {
+    page-break-after: auto !important;
+
+    break-after: auto !important;
+  }
+
+
+  /* -------------------------------------------------------
+     MAIN TABLE
+  ------------------------------------------------------- */
+
+  .payslip-table {
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    table-layout: fixed !important;
+
+    border-collapse: collapse !important;
+
+    border-spacing: 0 !important;
+
+    border: 1px solid #000000 !important;
+
+    background: #ffffff !important;
+  }
+
+
+  /* -------------------------------------------------------
+     MAIN TABLE CELLS
+  ------------------------------------------------------- */
+
+  .payslip-table td,
+  .payslip-table th {
+    border: 1px solid #000000 !important;
+
+    background: #ffffff !important;
+
+    color: #000000 !important;
+
+    padding: 2px 3px !important;
+
+    font-size: 8px !important;
+
+    line-height: 1.05 !important;
+
+    font-weight: 600 !important;
+
+    vertical-align: middle !important;
+  }
+
+
+  /* -------------------------------------------------------
+     COMPANY HEADER
+  ------------------------------------------------------- */
+
+  .company-name {
+    background: #ffffff !important;
+
+    color: red !important;
+
+    font-size: 11px !important;
+
+    line-height: 12px !important;
+
+    font-weight: 700 !important;
+  }
+
+  .company-address {
+    background: #ffffff !important;
+
+    color: #000000 !important;
+
+    font-size: 7px !important;
+
+    line-height: 8px !important;
+
+    font-weight: 400 !important;
+  }
+
+  .slip-month {
+    font-size: 8px !important;
+
+    line-height: 9px !important;
+
+    font-weight: 700 !important;
+  }
+
+
+  /* -------------------------------------------------------
+     EMPLOYEE
+  ------------------------------------------------------- */
+
+  .employee-label,
+  .employee-value {
+    background: #ffffff !important;
+
+    color: #000000 !important;
+
+    font-size: 8px !important;
+
+    line-height: 9px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     LEAVE / BANK
+  ------------------------------------------------------- */
+
+  .leave-label,
+  .leave-value,
+  .attendance-label,
+  .attendance-value,
+  .bank-label,
+  .bank-value {
+    background: #ffffff !important;
+
+    color: #000000 !important;
+
+    font-size: 8px !important;
+
+    line-height: 9px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     SALARY
+  ------------------------------------------------------- */
+
+  .salary-inner-table {
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    table-layout: fixed !important;
+
+    border-collapse: collapse !important;
+
+    border-spacing: 0 !important;
+
+    background: #ffffff !important;
+  }
+
+  .salary-inner-table td,
+  .salary-inner-table th {
+    border: 1px solid #000000 !important;
+
+    background: #ffffff !important;
+
+    color: #000000 !important;
+
+    padding: 2px 3px !important;
+
+    font-size: 8px !important;
+
+    line-height: 9px !important;
+
+    font-weight: 600 !important;
+  }
+
+  .salary-inner-table th {
+    font-weight: 700 !important;
+  }
+
+  .salary-label,
+  .salary-number {
+    font-size: 8px !important;
+
+    line-height: 9px !important;
+  }
+}

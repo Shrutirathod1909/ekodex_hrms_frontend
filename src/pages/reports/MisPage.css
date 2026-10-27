@@ -1,0 +1,135 @@
+/* =========================================================
+   MIS SEARCH CARD
+========================================================= */
+
+.mis-search-card {
+  border: 1px solid #e1e5ea !important;
+  border-radius: 6px !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06) !important;
+  margin-bottom: 15px;
+}
+
+.mis-search-card .card-body {
+  padding: 12px 15px !important;
+}
+
+/* =========================================================
+   FORM LABEL
+========================================================= */
+
+.mis-search-card .form-label {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #343a40 !important;
+  margin-bottom: 4px !important;
+}
+
+/* =========================================================
+   SELECT / INPUT
+========================================================= */
+
+.mis-search-card .form-select,
+.mis-search-card .form-control {
+  height: 32px !important;
+  min-height: 32px !important;
+  padding: 4px 9px !important;
+  font-size: 12px !important;
+  border: 1px solid #ced4da !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+}
+
+.mis-search-card .form-select:focus,
+.mis-search-card .form-control:focus {
+  border-color: #86b7fe !important;
+  box-shadow: 0 0 0 0.12rem rgba(13, 110, 253, 0.12) !important;
+}
+
+/* =========================================================
+   SEARCH / RESET AREA
+========================================================= */
+
+.mis-search-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.mis-search-btn,
+.mis-reset-btn {
+  height: 32px !important;
+  min-height: 32px !important;
+  padding: 4px 13px !important;
+  border-radius: 5px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+
+  line-height: 1 !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Search */
+
+.mis-search-btn {
+  background: #dc3545 !important;
+  border: 1px solid #dc3545 !important;
+  color: #fff !important;
+}
+
+.mis-search-btn:hover {
+  background: #bb2d3b !important;
+  border-color: #b02a37 !important;
+  transform: translateY(-1px);
+}
+
+/* Reset */
+
+.mis-reset-btn {
+  background: #6c757d !important;
+  border: 1px solid #6c757d !important;
+  color: #fff !important;
+}
+
+.mis-reset-btn:hover {
+  background: #5c636a !important;
+  border-color: #565e64 !important;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   REMOVE EXTRA SPACING
+========================================================= */
+
+.mis-search-card .mb-3 {
+  margin-bottom: 8px !important;
+}
+
+.mis-search-card .mb-2 {
+  margin-bottom: 8px !important;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+  .mis-search-actions {
+    gap: 6px;
+  }
+
+  .mis-search-btn,
+  .mis-reset-btn {
+    width: 100%;
+  }
+}

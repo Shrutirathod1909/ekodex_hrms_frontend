@@ -1,0 +1,299 @@
+/* ================= MAIN WRAPPER ================= */
+
+.voucher-wrapper {
+  background: linear-gradient(to right, #eef2f7, #f8fafc);
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= BUTTON ACTIONS ================= */
+
+.voucher-actions {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 15px;
+  padding: 8px 15px 0 15px;
+}
+
+/* ================= BACK BUTTON ================= */
+
+.voucher-back-btn {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.voucher-back-btn:hover {
+  background: #8c232f;
+}
+
+/* ================= PRINT BUTTON ================= */
+
+.print-btn {
+  background: #1a4080;
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.print-btn:hover {
+  background: #153568;
+}
+
+/* ================= MAIN VOUCHER ================= */
+
+.voucher {
+  width: 950px;
+  margin: auto;
+  background: #fff;
+  padding: 35px;
+  border-radius: 8px;
+  border: 1px solid #dbe3ec;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* ================= HEADER ================= */
+
+.voucher-header {
+  text-align: center;
+  border-bottom: 2px solid #1a4080;
+  padding-bottom: 18px;
+  margin-bottom: 25px;
+}
+
+.voucher-header h2 {
+  margin: 0;
+  color: #1a4080;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.voucher-header h3 {
+  margin: 10px 0;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.voucher-header p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* ================= INFO SECTION ================= */
+
+.voucher-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.voucher-info div {
+  flex: 1;
+  background: #f8fbff;
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid #e0e7ef;
+}
+
+.voucher-info p {
+  margin: 10px 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.voucher-info b {
+  color: #1a4080;
+}
+
+/* ================= TABLE ================= */
+
+.voucher-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.voucher-table thead {
+  background: #1a4080;
+  color: white;
+}
+
+.voucher-table th {
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.voucher-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #333;
+}
+
+.voucher-table tbody tr:nth-child(even) {
+  background: #f9fbfd;
+}
+
+.total-row {
+  background: #edf3ff !important;
+}
+
+.total-row td {
+  font-size: 16px;
+  color: #1a4080;
+  border-top: 2px solid #1a4080;
+}
+
+/* ================= AMOUNT WORDS ================= */
+
+.amount-words {
+  margin-top: 22px;
+  padding: 16px;
+  background: #f5f8fc;
+  border-left: 5px solid #1a4080;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ================= BANK DETAILS ================= */
+
+.bank-box {
+  margin-top: 25px;
+  padding: 20px;
+  background: #f9fbfd;
+  border: 1px solid #dbe3ec;
+  border-radius: 10px;
+}
+
+.bank-box p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.bank-box b {
+  color: #1a4080;
+}
+
+/* ================= SIGNATURE ================= */
+
+.signature {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+  gap: 20px;
+}
+
+.signature div {
+  width: 30%;
+  text-align: center;
+  padding-top: 40px;
+  border-top: 2px solid #333;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media screen and (max-width: 900px) {
+
+  .voucher {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .voucher-info {
+    flex-direction: column;
+  }
+
+  .signature {
+    flex-direction: column;
+  }
+
+  .signature div {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .voucher-actions {
+    padding: 10px;
+  }
+
+  .back-btn,
+  .print-btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+/* ================= PRINT CSS ================= */
+
+@media print {
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .no-print,
+  .print-btn,
+  .back-btn {
+    display: none !important;
+  }
+
+  .voucher-wrapper {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: white !important;
+  }
+
+  .voucher {
+    width: 750px !important;
+    margin: 0 auto !important;
+    padding: 25px !important;
+    background: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    transform: scale(1) !important;
+    zoom: 1 !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+}

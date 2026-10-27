@@ -1,0 +1,1106 @@
+/* =========================================================
+   CLIENT ATTENDANCE
+========================================================= */
+
+.attendance-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 18px 20px 25px;
+  box-sizing: border-box;
+
+  background: #f5f7f9;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  color: #243b53;
+}
+
+
+/* =========================================================
+   FILTER SECTION
+========================================================= */
+
+.filter-section {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+
+  gap: 12px;
+
+  padding: 15px 16px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7eb;
+  border-radius: 7px;
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.03);
+
+  margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   FILTER ITEM
+========================================================= */
+
+.filter-item {
+  width: 280px;
+  min-width: 220px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.filter-item label {
+  margin-bottom: 6px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  color: #526b7a;
+}
+
+
+.filter-item select {
+  width: 100%;
+  height: 35px;
+
+  padding: 0 10px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d3dde3;
+  border-radius: 4px;
+
+  background: #ffffff;
+
+  color: #334e5c;
+
+  font-size: 12px;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: all 0.18s ease;
+}
+
+
+.filter-item select:hover {
+  border-color: #9db0bc;
+}
+
+
+.filter-item select:focus {
+  border-color: #3a75a8;
+
+  box-shadow:
+    0 0 0 2px rgba(58, 117, 168, 0.08);
+}
+
+
+.filter-item select:disabled {
+  background: #f4f6f7;
+
+  color: #9aa8b0;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   BUTTON SECTION
+========================================================= */
+
+.button-section {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  height: 35px;
+
+  margin-left: auto;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-btn {
+  height: 35px;
+
+  min-width: 78px;
+
+  padding: 0 15px;
+
+  border: 1px solid #28629d;
+  border-radius: 4px;
+
+  background: #28629d;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.18s ease;
+}
+
+
+.search-btn:hover {
+  background: #205487;
+  border-color: #205487;
+}
+
+
+.search-btn:active {
+  transform: translateY(1px);
+}
+
+
+.search-btn:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.reset-btn {
+  height: 35px;
+
+  min-width: 65px;
+
+  padding: 0 13px;
+
+  border: 1px solid #e45459;
+  border-radius: 4px;
+
+  background: #e45459;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.18s ease;
+}
+
+
+.reset-btn:hover {
+  background: #cc454a;
+  border-color: #cc454a;
+}
+
+
+.reset-btn:active {
+  transform: translateY(1px);
+}
+
+
+.reset-btn:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.attendance-error {
+  width: 100%;
+
+  margin-bottom: 10px;
+
+  padding: 9px 12px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #f0c4c6;
+  border-radius: 5px;
+
+  background: #fff6f6;
+
+  color: #bd3d43;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.table-wrapper {
+  width: 100%;
+
+  overflow: auto;
+
+  max-height: calc(100vh - 205px);
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dce4e8;
+
+  border-radius: 6px;
+
+  box-shadow:
+    0 1px 3px rgba(30, 60, 80, 0.035);
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.attendance-table {
+  border-collapse: separate;
+  border-spacing: 0;
+
+  width: max-content;
+  min-width: 100%;
+
+  table-layout: fixed;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   TABLE CELLS
+========================================================= */
+
+.attendance-table th,
+.attendance-table td {
+  height: 31px;
+
+  padding: 0 6px;
+
+  box-sizing: border-box;
+
+  border-right: 1px solid #e0e6e9;
+  border-bottom: 1px solid #e0e6e9;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+
+  vertical-align: middle;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.attendance-table thead th {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 10;
+
+  height: 35px;
+
+  background: #edf3f6;
+
+  color: #294d63;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-align: center;
+
+  box-shadow:
+    0 1px 0 #d8e1e5;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+.attendance-table tbody td {
+  background: #ffffff;
+
+  color: #3c596b;
+}
+
+
+.attendance-table tbody tr:nth-child(even) td {
+  background: #fafcfd;
+}
+
+
+.attendance-table tbody tr:hover td {
+  background: #f1f7fa;
+}
+
+
+/* =========================================================
+   FIRST 3 COLUMNS - STICKY
+========================================================= */
+
+.attendance-table th:nth-child(1),
+.attendance-table td:nth-child(1) {
+  position: sticky;
+
+  left: 0;
+
+  z-index: 8;
+
+  background: #ffffff;
+}
+
+
+.attendance-table th:nth-child(2),
+.attendance-table td:nth-child(2) {
+  position: sticky;
+
+  left: 70px;
+
+  z-index: 8;
+
+  background: #ffffff;
+}
+
+
+.attendance-table th:nth-child(3),
+.attendance-table td:nth-child(3) {
+  position: sticky;
+
+  left: 360px;
+
+  z-index: 8;
+
+  background: #ffffff;
+}
+
+
+/* Header sticky columns */
+
+.attendance-table thead th:nth-child(1),
+.attendance-table thead th:nth-child(2),
+.attendance-table thead th:nth-child(3) {
+  z-index: 15;
+
+  background: #edf3f6;
+}
+
+
+/* =========================================================
+   SR COLUMN
+========================================================= */
+
+.sr-column {
+  width: 70px;
+
+  min-width: 70px;
+
+  max-width: 70px;
+
+  text-align: center !important;
+
+  color: #627985 !important;
+}
+
+
+/* =========================================================
+   CLIENT COLUMN
+========================================================= */
+
+.client-column {
+  width: 290px;
+
+  min-width: 290px;
+
+  max-width: 290px;
+
+  text-align: left !important;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  color: #294d63 !important;
+
+  font-weight: 500 !important;
+}
+
+
+/* =========================================================
+   SITE COLUMN
+========================================================= */
+
+.site-column {
+  width: 180px;
+
+  min-width: 180px;
+
+  max-width: 180px;
+
+  text-align: left !important;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  color: #526b78 !important;
+}
+
+
+/* =========================================================
+   DAY COLUMN
+========================================================= */
+
+.day-column {
+  width: 45px;
+
+  min-width: 45px;
+
+  max-width: 45px;
+
+  padding: 0 3px !important;
+
+  text-align: center !important;
+
+  font-size: 10px !important;
+
+  color: #476474 !important;
+}
+
+
+/* =========================================================
+   ATTENDANCE VALUE
+========================================================= */
+
+.attendance-table tbody .day-column {
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   LOADING CELL
+========================================================= */
+
+.loading-cell {
+  height: 90px !important;
+
+  text-align: center !important;
+
+  background: #ffffff !important;
+
+  color: #657f8d !important;
+
+  font-size: 12px !important;
+}
+
+
+/* =========================================================
+   TABLE LOADING
+========================================================= */
+
+.table-loading {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+}
+
+
+/* =========================================================
+   SMALL SPINNER
+========================================================= */
+
+.small-spinner {
+  width: 15px;
+
+  height: 15px;
+
+  border: 2px solid #dbe5ea;
+
+  border-top-color: #28629d;
+
+  border-radius: 50%;
+
+  animation:
+    attendanceSpin 0.75s linear infinite;
+}
+
+
+@keyframes attendanceSpin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   NO DATA
+========================================================= */
+
+.no-data {
+  height: 85px !important;
+
+  text-align: center !important;
+
+  background: #ffffff !important;
+
+  color: #84949d !important;
+
+  font-size: 12px !important;
+}
+
+
+/* =========================================================
+   FULL PAGE LOADING
+========================================================= */
+
+.attendance-loading-screen {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #f5f7f9;
+}
+
+
+/* =========================================================
+   LOADING CARD
+========================================================= */
+
+.attendance-loader-card {
+  width: 310px;
+
+  padding: 28px 25px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e0e7eb;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 8px 30px rgba(30, 60, 80, 0.08);
+}
+
+
+/* =========================================================
+   BIG SPINNER
+========================================================= */
+
+.attendance-spinner {
+  width: 38px;
+
+  height: 38px;
+
+  margin: 0 auto 15px;
+
+  border: 3px solid #dce6eb;
+
+  border-top-color: #28629d;
+
+  border-radius: 50%;
+
+  animation:
+    attendanceSpin 0.8s linear infinite;
+}
+
+
+/* =========================================================
+   LOADING TITLE
+========================================================= */
+
+.attendance-loading-title {
+  margin-bottom: 6px;
+
+  color: #294d63;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   LOADING TEXT
+========================================================= */
+
+.attendance-loading-text {
+  color: #7b8d97;
+
+  font-size: 11px;
+
+  line-height: 18px;
+}
+
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.pagination-container {
+  width: 100%;
+
+  min-height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 8px 12px;
+
+  box-sizing: border-box;
+
+  margin-top: 10px;
+
+  background: #ffffff;
+
+  border: 1px solid #e0e7eb;
+
+  border-radius: 6px;
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.025);
+}
+
+
+/* =========================================================
+   PAGINATION INFO
+========================================================= */
+
+.pagination-info {
+  color: #71838e;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+
+.pagination-info strong {
+  color: #38586a;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   ROWS PER PAGE
+========================================================= */
+
+.rows-per-page {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #71838e;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+
+.rows-per-page select {
+  height: 29px;
+
+  min-width: 62px;
+
+  padding: 0 7px;
+
+  border: 1px solid #d2dde3;
+
+  border-radius: 4px;
+
+  background: #ffffff;
+
+  color: #455f6e;
+
+  font-size: 11px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+
+.rows-per-page select:focus {
+  border-color: #3b75a6;
+}
+
+
+/* =========================================================
+   PAGINATION BUTTONS
+========================================================= */
+
+.pagination-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+}
+
+
+/* =========================================================
+   COMMON PAGE BUTTON
+========================================================= */
+
+.page-number,
+.pagination-arrow {
+  width: 29px;
+
+  height: 29px;
+
+  padding: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid #d5dfe4;
+
+  border-radius: 4px;
+
+  background: #ffffff;
+
+  color: #526d7b;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: all 0.15s ease;
+}
+
+
+.page-number:hover,
+.pagination-arrow:hover:not(:disabled) {
+  border-color: #9fb4c0;
+
+  background: #f2f7f9;
+}
+
+
+/* =========================================================
+   ACTIVE PAGE
+========================================================= */
+
+.page-number.active {
+  border-color: #28629d;
+
+  background: #28629d;
+
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   DISABLED PAGINATION
+========================================================= */
+
+.pagination-arrow:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+
+  background: #f5f7f8;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.table-wrapper::-webkit-scrollbar {
+  width: 7px;
+
+  height: 7px;
+}
+
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: #edf2f4;
+}
+
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #b8c7cf;
+
+  border-radius: 5px;
+}
+
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #97aeb9;
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1400px) {
+
+  .filter-section {
+    gap: 10px;
+  }
+
+  .filter-item {
+    width: 250px;
+  }
+
+  .client-column {
+    width: 260px;
+
+    min-width: 260px;
+
+    max-width: 260px;
+  }
+
+  .site-column {
+    width: 160px;
+
+    min-width: 160px;
+
+    max-width: 160px;
+  }
+
+  .attendance-table th:nth-child(3),
+  .attendance-table td:nth-child(3) {
+    left: 330px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .filter-section {
+    flex-wrap: wrap;
+
+    align-items: flex-end;
+  }
+
+
+  .filter-item {
+    width: calc(33.333% - 10px);
+
+    min-width: 200px;
+  }
+
+
+  .button-section {
+    margin-left: 0;
+  }
+
+
+  .pagination-container {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .attendance-page {
+    padding: 10px;
+  }
+
+
+  .filter-section {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 13px;
+
+    gap: 11px;
+  }
+
+
+  .filter-item {
+    width: 100%;
+
+    min-width: 100%;
+  }
+
+
+  .filter-item select {
+    height: 38px;
+  }
+
+
+  .button-section {
+    width: 100%;
+
+    margin-left: 0;
+
+    height: 38px;
+  }
+
+
+  .search-btn,
+  .reset-btn {
+    height: 38px;
+  }
+
+
+  .search-btn {
+    flex: 1;
+  }
+
+
+  .reset-btn {
+    width: 85px;
+  }
+
+
+  .table-wrapper {
+    max-height: calc(100vh - 280px);
+  }
+
+
+  .pagination-container {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 9px;
+
+    padding: 10px;
+  }
+
+
+  .pagination-info {
+    text-align: center;
+  }
+
+
+  .rows-per-page {
+    justify-content: center;
+  }
+
+
+  .pagination-buttons {
+    justify-content: center;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .attendance-page {
+    padding: 7px;
+  }
+
+
+  .filter-section {
+    padding: 11px;
+  }
+
+
+  .client-column {
+    width: 220px;
+
+    min-width: 220px;
+
+    max-width: 220px;
+  }
+
+
+  .site-column {
+    width: 140px;
+
+    min-width: 140px;
+
+    max-width: 140px;
+  }
+
+
+  .day-column {
+    width: 42px;
+
+    min-width: 42px;
+
+    max-width: 42px;
+  }
+
+
+  .attendance-loader-card {
+    width: calc(100% - 30px);
+
+    max-width: 310px;
+  }
+
+}

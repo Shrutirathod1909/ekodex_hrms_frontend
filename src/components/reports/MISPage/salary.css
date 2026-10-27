@@ -1,0 +1,335 @@
+@media print {
+
+  /* =========================================================
+     PAGE
+  ========================================================= */
+
+  @page {
+    size: A4 landscape;
+    margin: 5mm;
+  }
+
+  html,
+  body {
+    width: 100% !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: visible !important;
+
+    background: #fff !important;
+
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+
+  /* =========================================================
+     HIDE EVERYTHING EXCEPT PRINT AREA
+  ========================================================= */
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  #print-area,
+  #print-area * {
+    visibility: visible !important;
+  }
+
+
+  /* =========================================================
+     IMPORTANT
+     DO NOT USE position: fixed
+  ========================================================= */
+
+  #print-area {
+    position: relative !important;
+
+    top: auto !important;
+    left: auto !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* =========================================================
+     REMOVE BOOTSTRAP CARD SPACING
+  ========================================================= */
+
+  #print-area .card,
+  #print-area .card-header,
+  #print-area .card-body {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+
+    box-shadow: none !important;
+
+    background: #fff !important;
+  }
+
+
+  /* =========================================================
+     TABLE CONTAINER
+  ========================================================= */
+
+  #print-area .table-responsive,
+  #print-area .salary-table-container {
+    width: 100% !important;
+
+    max-width: none !important;
+
+    overflow: visible !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+
+  /* =========================================================
+     TABLE
+  ========================================================= */
+
+  #print-area table,
+  #print-area .salary-table {
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    max-width: none !important;
+
+    table-layout: auto !important;
+
+    border-collapse: collapse !important;
+
+    border-spacing: 0 !important;
+
+    margin: 0 !important;
+
+    page-break-inside: auto !important;
+
+    break-inside: auto !important;
+  }
+
+
+  /* =========================================================
+     TABLE HEADER
+  ========================================================= */
+
+  #print-area thead {
+    display: table-header-group !important;
+
+    page-break-inside: avoid !important;
+
+    break-inside: avoid !important;
+  }
+
+
+  #print-area thead tr {
+    page-break-inside: avoid !important;
+
+    break-inside: avoid !important;
+  }
+
+
+  /* =========================================================
+     TABLE ROW
+  ========================================================= */
+
+  #print-area tbody {
+    display: table-row-group !important;
+  }
+
+
+  #print-area tbody tr {
+    page-break-inside: avoid !important;
+
+    break-inside: avoid !important;
+
+    page-break-after: auto !important;
+  }
+
+
+  /* =========================================================
+     CELLS
+
+     IMPORTANT:
+     DON'T ALLOW LETTER-BY-LETTER WRAPPING
+  ========================================================= */
+
+  #print-area th,
+  #print-area td {
+    border: 1px solid #000 !important;
+
+    padding: 2px 4px !important;
+
+    margin: 0 !important;
+
+    font-size: 7px !important;
+
+    line-height: 1.15 !important;
+
+    text-align: center !important;
+
+    vertical-align: middle !important;
+
+    white-space: nowrap !important;
+
+    word-break: normal !important;
+
+    overflow-wrap: normal !important;
+
+    word-wrap: normal !important;
+
+    height: auto !important;
+
+    min-height: 0 !important;
+
+    max-width: none !important;
+  }
+
+
+  /* =========================================================
+     HEADER CELLS
+  ========================================================= */
+
+  #print-area th {
+    font-size: 7px !important;
+
+    font-weight: 700 !important;
+
+    white-space: nowrap !important;
+
+    word-break: normal !important;
+
+    overflow-wrap: normal !important;
+
+    vertical-align: middle !important;
+
+    text-align: center !important;
+
+    background: #e5e7eb !important;
+
+    color: #000 !important;
+  }
+
+
+  /* =========================================================
+     MAIN HEADER
+  ========================================================= */
+
+  #print-area .main-header th {
+    background: #cbd5e1 !important;
+
+    font-weight: 700 !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* =========================================================
+     SUB HEADER
+  ========================================================= */
+
+  #print-area .sub-header th {
+    background: #f1f5f9 !important;
+
+    font-weight: 700 !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* =========================================================
+     EMPLOYEE NAME
+  ========================================================= */
+
+  #print-area .name-cell {
+    text-align: left !important;
+
+    white-space: nowrap !important;
+
+    min-width: 90px !important;
+  }
+
+
+  /* =========================================================
+     NUMBER CELLS
+  ========================================================= */
+
+  #print-area .number-cell {
+    text-align: right !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* =========================================================
+     TOTAL ROW
+  ========================================================= */
+
+  #print-area .total-row {
+    background: #fde68a !important;
+
+    font-weight: 700 !important;
+
+    page-break-inside: avoid !important;
+
+    break-inside: avoid !important;
+  }
+
+
+  #print-area .total-row td {
+    background: #fde68a !important;
+
+    font-weight: 700 !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* =========================================================
+     LEFT ALIGN
+  ========================================================= */
+
+  #print-area .text-start {
+    text-align: left !important;
+  }
+
+
+  /* =========================================================
+     REMOVE BUTTONS
+  ========================================================= */
+
+  .no-print,
+  button,
+  .btn {
+    display: none !important;
+  }
+
+
+  /* =========================================================
+     REMOVE HORIZONTAL SCROLL
+  ========================================================= */
+
+  #print-area {
+    overflow: visible !important;
+  }
+
+  #print-area * {
+    overflow: visible !important;
+  }
+}

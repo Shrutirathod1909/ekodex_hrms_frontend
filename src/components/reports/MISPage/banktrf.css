@@ -1,0 +1,52 @@
+.page-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px !important;
+  padding: 8px 0 !important;
+  background: #fff;
+  border: none;
+}
+
+.header-details {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.header-details h4 {
+  margin: 0 !important;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.compact-btn {
+  padding: 4px 10px !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  border-radius: 4px !important;
+}
+
+.bank-table-wrapper {
+  width: 100%;
+}
+
+.bank-trf-table {
+  width: 100% !important;
+  margin: 0 !important;
+}
